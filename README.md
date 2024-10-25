@@ -16,19 +16,9 @@
 
 ### API Installation
 1. Connect to the MQTT broker server via SSH or go to terminal.
-2. Run the following command and follow the instructions to launch the mqtt broker.
+2. Run the following command in a server to launch the database server:
    ```
-   bash <(curl -s https://gist.githubusercontent.com/casi-devops-team/31a5680df02c9632830a574ec895db37/raw/2c15e056bcc1bf463c6542103c953adff389010b/local-casi-mqtt.sh)
-   ```
-   - Now you can access the mqtt broker server at `http://server-ip-address:18083/` or at `http://server-hostname/:18083`.
-   - Default admin credentials for MQTT Broker
-     - username: admin
-     - password: public
-   - The server must accept inbound traffic through ports `1883,8083,8084,8883,18083`. Configure the firewall to enable these ports. We recommend you to get support of a professional for firewall configuaration.
-4. Connect to the database server via SSH or go to terminal:
-5. Run the following command in a server to launch the database server:
-   ```
-   curl -sSL -o casi_script.sh https://gist.githubusercontent.com/casi-devops-team/6ec4887a4b022a1d1818f5958a86147a/raw/3a5202275545a4e6db62a6155e59b871a195c320/local-casi-database.sh && sudo bash casi_script.sh
+   curl -sSL -o casi_script.sh https://gist.githubusercontent.com/janith-jware/a237771cb043e34143ae6324acf69e2f/raw/e5a4d2aff0d8f8187f4d7f979084f745e37f7f03/casi-consolidated-local-installation.sh && sudo bash casi_script.sh
    ```
    - Now you can access influxDB portal at `http://server-ip-address-or-hostname:8086` and MySQL server via port `3307`.
    - Default credentials for InfluxDB portal
